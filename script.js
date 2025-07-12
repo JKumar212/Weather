@@ -34,9 +34,11 @@ cityInput.addEventListener("input", () => {
 });
 
 function fetchAirQuality(city) {
-  fetch(`https://api.api-ninjas.com/v1/airquality?city=${city}`, {
+  fetch(`https://air-quality-by-api-ninjas.p.rapidapi.com/v1/airquality?city=${city}`, {
+    method: 'GET' ,
     headers: {
       "X-Api-Key": "29319182famsh79992c05fef05dbp1161f2jsnaa44ff3138f4"
+      'x-RapidAPI-Host' : ' air-quality-by-api-ninjas.p.rapidapi.com'
     }
   })
     .then(res => res.json())
